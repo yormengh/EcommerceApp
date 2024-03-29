@@ -65,7 +65,7 @@ pipeline {
         stage ('Upload to Nexus') {
             steps {
                 echo "Uploading to Nexus done.."
-                nexusArtifactUploader artifacts: [[artifactId: 'EcommerceApp', classifier: '', file: '/var/lib/jenkins/workspace/first-pipeline-job/target/web-app.war', type: 'war']], credentialsId: 'nexus-id', groupId: 'com', nexusUrl: '18.220.20.21:8081/repository/ecommerce-webapp-snapshot/', nexusVersion: 'nexus3', protocol: 'http', repository: 'ecommerce-webapp-snapshot', version: '0.0.1-SNAPSHOT'
+                nexusArtifactUploader artifacts: [[artifactId: 'EcommerceApp', classifier: '', file: '/var/lib/jenkins/workspace/Jenkins-Declarative-Pipeline-project/EcommerceApp/target/EcommerceApp.war', type: 'war']], credentialsId: 'nexus-id', groupId: 'com', nexusUrl: '18.220.20.21:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'webapp-snapshot', version: '0.0.1-SNAPSHOT'
             }
         }
 
