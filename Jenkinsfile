@@ -49,7 +49,7 @@ pipeline {
             }
 
             steps {
-                echo "Analyzing with SonarQube.."
+                echo "Analyzing with SonarQube Successfully done.."
                 script {
                     dir ('EcommerceApp') {
                         def compiledClassesDir = sh(script: 'mvn help:evaluate -Dexpression=project.build.outputDirectory -q -DforceStdout', returnStdout: true).trim()
